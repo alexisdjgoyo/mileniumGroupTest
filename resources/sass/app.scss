@@ -1,0 +1,82 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+.bg-dark-app {
+    background-color: #303030;
+}
+
+#app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app > main {
+    width: 650px;
+}
+
+#app .card {
+    background-color: transparent;
+    border: none;
+}
+
+#app img {
+    height: 200px;
+}
+#app h1 {
+    color: #f8fafc;
+}
+
+#app .card-header {
+    border-bottom: none;
+    background-color: transparent;
+}
+
+#not-registered {
+    color: #AEAEAE;
+}
+
+#not-registered  a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+#card-register {
+    background-color: #fff !important;
+}
+
+.btn-primary {
+    background-color: #8362E7 !important;
+    border-color: #8362E7 !important;
+}
+
+.nav-bar-custom {
+    background-color: #303030;
+}
+
+#content-dashboard{
+    height: 85vh;
+}
+#content-dashboard .row{
+    height: 85vh;
+}
+
+.table-users thead {
+    background-color:rgba(48, 48, 48,1 );
+    color: #fff;
+}
+
+.card-dashboard{
+    height: 300px;
+}
+.card-dashboard-xs{
+    height: 260px;
+}
