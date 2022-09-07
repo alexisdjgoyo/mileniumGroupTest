@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -31,4 +32,5 @@ Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])-
 Route::middleware(['auth'])->group(function () {
     Route::put('users/{user}/approve', [UserController::class,'approve'])->name('users.approve');
     Route::put('users/{user}/reject', [UserController::class,'reject'])->name('users.reject');
+    Route::resource('news', NewsController::class)->only(['store','show']);
 });

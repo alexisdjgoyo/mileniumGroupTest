@@ -35,7 +35,27 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $new = new News;
+        $new->title = $request->title;
+        $new->link = $request->link;
+        $new->date = $request->date;
+
+        if ($request->file) {
+            $image = request()->file('file');
+            $filenameWithExt = $image->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $image->getClientOriginalExtension();
+            $fileNameToStore = $filename . '_' . time() . '.' . $extension;
+            $path = $image->storeAs('public/news', $fileNameToStore);
+            $new->file = str_replace('public','/storage', $path);
+        } else {
+            $new->file = '';
+        }
+
+        $new->save();
+
+        flash()->addSuccess('Noticia creada exitosamente');
+        return redirect()->back();
     }
 
     /**
@@ -46,7 +66,7 @@ class NewsController extends Controller
      */
     public function show(News $news)
     {
-        //
+        return view('news.show',compact('news'));
     }
 
     /**

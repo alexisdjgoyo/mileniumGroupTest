@@ -20,7 +20,7 @@
 <body>
     <div class="container-fluid px-0">
         <nav class="navbar nav-bar-custom">
-            <a class="navbar-brand text-center" href="#" style="width: 80px">
+            <a class="navbar-brand text-center" href="{{ route('dashboard') }}" style="width: 80px">
                 <img src="/images/logo.png" width="30" height="30" alt="">
             </a>
         </nav>
