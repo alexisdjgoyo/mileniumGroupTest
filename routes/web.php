@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,9 @@ Route::get('login', function () {
 
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+
+
+Route::middleware(['auth'])->group(function () {
+    Route::put('users/{user}/approve', [UserController::class,'approve'])->name('users.approve');
+    Route::put('users/{user}/reject', [UserController::class,'reject'])->name('users.reject');
+});

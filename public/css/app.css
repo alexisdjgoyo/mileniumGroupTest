@@ -10884,7 +10884,7 @@ textarea.form-control-lg {
 }
 
 #not-registered {
-  color: #AEAEAE;
+  color: #aeaeae;
 }
 
 #not-registered a {
@@ -10897,8 +10897,8 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  background-color: #8362E7 !important;
-  border-color: #8362E7 !important;
+  background-color: #8362e7 !important;
+  border-color: #8362e7 !important;
 }
 
 .nav-bar-custom {
@@ -10909,8 +10909,13 @@ textarea.form-control-lg {
   height: 85vh;
 }
 
-#content-dashboard .row {
+#row-100 {
   height: 85vh;
+}
+
+.table-users {
+  display: block;
+  font-size: 11px !important;
 }
 
 .table-users thead {
@@ -10924,4 +10929,51 @@ textarea.form-control-lg {
 
 .card-dashboard-xs {
   height: 260px;
+}
+
+tbody {
+  display: block;
+  height: 190px;
+  overflow-y: auto;
+}
+
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+thead {
+  width: 100%;
+}
+
+.scroller::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Estilos barra (thumb) de scroll */
+.scroller::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.scroller::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+.scroller::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos track de scroll */
+.scroller::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+
+.scroller::-webkit-scrollbar-track:hover,
+.scroller::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
 }
