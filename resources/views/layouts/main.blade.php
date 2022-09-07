@@ -23,6 +23,10 @@
             <a class="navbar-brand text-center" href="{{ route('dashboard') }}" style="width: 80px">
                 <img src="/images/logo.png" width="30" height="30" alt="">
             </a>
+            <form action="{{ route('logout') }}" method="post">
+                @csrf
+                <button class="btn" type="submit" style="color: #fff;">Salir</button>
+            </form>
         </nav>
         @yield('content')
     </div>
