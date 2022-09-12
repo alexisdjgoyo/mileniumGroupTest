@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "ec2-52-207-90-231.compute-1.amazonaws.com",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "sdf",
+            "database": "d4gm5sendn7l28",
+            "username": "vdcbwriyhhcufm",
+            "password": "8859ece53e9410b657d7b4c9a8289dac677d02d9b5b6a83e6b163a9a51c5d69d"
+        }
+    ]
+}

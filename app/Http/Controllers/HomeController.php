@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::where('id','<>', auth()->user()->id)->get();
+        $users = User::where('id','<>', auth()->user()->id)->orderBy('id','desc')->get();
         $news = News::orderBy('created_at','desc')->orderBy('id','desc')->get();
         return view('home',compact('users','news'));
     }
